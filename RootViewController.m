@@ -14,15 +14,21 @@
 
 @implementation RootViewController
 
+static NSString *CellIdentifier = @"Cell";
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    [self.tableView registerClass:[UITableViewCell class]
+           forCellReuseIdentifier:CellIdentifier];
+    
     
     self.tableView.rowHeight = 80.0;
     self.tableView.separatorColor = [UIColor redColor];
     self.tableView.backgroundColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.0 alpha:0.6];
 
-    
     // tableHeaderView
     UIView *tableHeaderView = [UIView new];
     tableHeaderView.backgroundColor = [UIColor colorWithRed:0.5 green:0.3 blue:0.0 alpha:0.2];
@@ -58,14 +64,32 @@
     return 20;
 }
 
+-(UITableViewCell *) getCellVersionOneWithIdentifier:(NSString *)cellIdentifier forTableView:(UITableView *)tableView
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    return cell;
+}
+
+-(UITableViewCell *) getCellVersionOneWithIdentifier:(NSString *)cellIdentifier forTableView:(UITableView *)tableView forIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    return cell;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+//    static NSString *CellIdentifier = @"Cell";
     
-    if(cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+//    UITableViewCell *cell = [self getCellVersionOneWithIdentifier:CellIdentifier forTableView:tableView];
+    
+    // Need to register cell for the next one to work.
+    UITableViewCell *cell = [self getCellVersionOneWithIdentifier:CellIdentifier forTableView:tableView forIndexPath:indexPath];
+    
+    // Don't need this conditional logic when registering the cell and calling tableView dequeueReusableCellWithIdentifier:forIndexPath:
+//    if(cell == nil){
+//        cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         
         // text styling (label).
         cell.textLabel.textColor = [UIColor whiteColor];
@@ -113,7 +137,7 @@
         selectedBackgroundView.backgroundColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.0 alpha:0.6];
         cell.selectedBackgroundView = selectedBackgroundView;
         
-    }
+//    }
     // Configure the cell...
     cell.textLabel.text = [NSString stringWithFormat:@"Hello there!\n %ld", (long)indexPath.row];
     return cell;
