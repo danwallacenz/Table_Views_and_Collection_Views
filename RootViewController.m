@@ -14,7 +14,14 @@
 
 @implementation RootViewController
 
-
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.tableView.rowHeight = 80.0;
+    self.tableView.separatorColor = [UIColor redColor];
+    self.tableView.backgroundColor = [UIColor colorWithRed:0.6 green:0.5 blue:0.1 alpha:0.5];
+}
 
 #pragma mark - Table view data source
 
@@ -40,7 +47,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         
         // text styling (label).
-        cell.textLabel.textColor = [UIColor orangeColor];
+        cell.textLabel.textColor = [UIColor whiteColor];
         cell.textLabel.highlightedTextColor = [UIColor redColor];
         cell.textLabel.textAlignment = NSTextAlignmentLeft;
         cell.textLabel.numberOfLines = 2; // 0 = no max
@@ -52,11 +59,38 @@
         cell.imageView.image = [self image];
         cell.imageView.contentMode = UIViewContentModeCenter;
         
+        cell.imageView.layer.cornerRadius = cell.imageView.image.size.height / 2.0;
+        cell.imageView.clipsToBounds = YES;
+        
+        
         // accessory type
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         
         // accessory view. Overrides accessoryType.
         cell.accessoryView = [self accessoryViewButton];
+        
+        // indentation.
+        cell.indentationLevel = indexPath.row;
+        cell.indentationWidth = 2;
+        
+        // separator inset.
+        cell.separatorInset = UIEdgeInsetsMake(0, 60, 0, 60);
+        
+        // selection style
+        cell.selectionStyle = UITableViewCellSelectionStyleDefault; // or UITableViewCellSelectionStyleNone
+        
+        // background color.
+        cell.backgroundColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.0 alpha:0.2];
+        
+        // background view and selected background view.
+        UIImageView *backgroundView = [UIImageView new]; // No need to set frame.
+        backgroundView.contentMode = UIViewContentModeScaleToFill;
+        backgroundView.image = [UIImage imageNamed: @"flowers"];
+        cell.backgroundView = backgroundView;
+        
+        UIView *selectedBackgroundView = [UIView new];
+        selectedBackgroundView.backgroundColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.0 alpha:0.6];
+        cell.selectedBackgroundView = selectedBackgroundView;
         
     }
     // Configure the cell...
@@ -75,7 +109,6 @@
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
     [button setTitle:@"Tap Me" forState:UIControlStateNormal];
     [button sizeToFit];
-//    [button targetForAction:@selector(tap:) withSender:button];
     [button addTarget:self action:@selector(tap:) forControlEvents:UIControlEventTouchUpInside];
     
     return button;

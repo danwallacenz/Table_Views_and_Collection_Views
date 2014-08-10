@@ -22,6 +22,8 @@
 		CBD0D08D19970772001CFD34 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD0D08C19970772001CFD34 /* RootViewController.m */; };
 		CBD0D09219970B28001CFD34 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD0D09019970B28001CFD34 /* RootViewController.xib */; };
 		CBD0D09619973A4B001CFD34 /* smiley.png in Resources */ = {isa = PBXBuildFile; fileRef = CBD0D09519973A4B001CFD34 /* smiley.png */; };
+		CBD0D09819974A44001CFD34 /* linen.png in Resources */ = {isa = PBXBuildFile; fileRef = CBD0D09719974A44001CFD34 /* linen.png */; };
+		CBD0D09A19975BD0001CFD34 /* flowers.png in Resources */ = {isa = PBXBuildFile; fileRef = CBD0D09919975BD0001CFD34 /* flowers.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		CBD0D08C19970772001CFD34 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = ../RootViewController.m; sourceTree = "<group>"; };
 		CBD0D09019970B28001CFD34 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		CBD0D09519973A4B001CFD34 /* smiley.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smiley.png; sourceTree = "<group>"; };
+		CBD0D09719974A44001CFD34 /* linen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linen.png; sourceTree = "<group>"; };
+		CBD0D09919975BD0001CFD34 /* flowers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flowers.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,11 +120,13 @@
 			children = (
 				CBD0D08B19970772001CFD34 /* RootViewController.h */,
 				CBD0D08C19970772001CFD34 /* RootViewController.m */,
+				CBD0D09919975BD0001CFD34 /* flowers.png */,
 				CBD0D09019970B28001CFD34 /* RootViewController.xib */,
 				CBD0D06B19970754001CFD34 /* AppDelegate.h */,
 				CBD0D06C19970754001CFD34 /* AppDelegate.m */,
 				CBD0D06E19970754001CFD34 /* Images.xcassets */,
 				CBD0D09519973A4B001CFD34 /* smiley.png */,
+				CBD0D09719974A44001CFD34 /* linen.png */,
 				CBD0D06319970754001CFD34 /* Supporting Files */,
 			);
 			path = Table_Views_and_Collection_Views;
@@ -230,8 +236,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBD0D09A19975BD0001CFD34 /* flowers.png in Resources */,
 				CBD0D06719970754001CFD34 /* InfoPlist.strings in Resources */,
 				CBD0D09619973A4B001CFD34 /* smiley.png in Resources */,
+				CBD0D09819974A44001CFD34 /* linen.png in Resources */,
 				CBD0D06F19970754001CFD34 /* Images.xcassets in Resources */,
 				CBD0D09219970B28001CFD34 /* RootViewController.xib in Resources */,
 			);
