@@ -24,6 +24,7 @@
 		CBD0D09619973A4B001CFD34 /* smiley.png in Resources */ = {isa = PBXBuildFile; fileRef = CBD0D09519973A4B001CFD34 /* smiley.png */; };
 		CBD0D09819974A44001CFD34 /* linen.png in Resources */ = {isa = PBXBuildFile; fileRef = CBD0D09719974A44001CFD34 /* linen.png */; };
 		CBD0D09A19975BD0001CFD34 /* flowers.png in Resources */ = {isa = PBXBuildFile; fileRef = CBD0D09919975BD0001CFD34 /* flowers.png */; };
+		E066291D199831A300948E18 /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E066291C199831A300948E18 /* MyCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		CBD0D09519973A4B001CFD34 /* smiley.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smiley.png; sourceTree = "<group>"; };
 		CBD0D09719974A44001CFD34 /* linen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linen.png; sourceTree = "<group>"; };
 		CBD0D09919975BD0001CFD34 /* flowers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flowers.png; sourceTree = "<group>"; };
+		E066291B199831A300948E18 /* MyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCell.h; path = ../MyCell.h; sourceTree = "<group>"; };
+		E066291C199831A300948E18 /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyCell.m; path = ../MyCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 		CBD0D06219970754001CFD34 /* Table_Views_and_Collection_Views */ = {
 			isa = PBXGroup;
 			children = (
+				E066291B199831A300948E18 /* MyCell.h */,
+				E066291C199831A300948E18 /* MyCell.m */,
 				CBD0D08B19970772001CFD34 /* RootViewController.h */,
 				CBD0D08C19970772001CFD34 /* RootViewController.m */,
 				CBD0D09919975BD0001CFD34 /* flowers.png */,
@@ -261,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBD0D06D19970754001CFD34 /* AppDelegate.m in Sources */,
+				E066291D199831A300948E18 /* MyCell.m in Sources */,
 				CBD0D06919970754001CFD34 /* main.m in Sources */,
 				CBD0D08D19970772001CFD34 /* RootViewController.m in Sources */,
 			);
@@ -459,6 +465,7 @@
 				CBD0D08719970754001CFD34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBD0D08819970754001CFD34 /* Build configuration list for PBXNativeTarget "Table_Views_and_Collection_ViewsTests" */ = {
 			isa = XCConfigurationList;
@@ -467,6 +474,7 @@
 				CBD0D08A19970754001CFD34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

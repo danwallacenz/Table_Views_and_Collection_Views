@@ -7,6 +7,7 @@
 //
 
 #import "RootViewController.h"
+#import "MyCell.h"
 
 @interface RootViewController ()
 
@@ -70,10 +71,16 @@ static NSString *CellIdentifier = @"Cell";
     return cell;
 }
 
--(UITableViewCell *) getCellVersionOneWithIdentifier:(NSString *)cellIdentifier forTableView:(UITableView *)tableView forIndexPath:(NSIndexPath *)indexPath
+//-(UITableViewCell *) getCellVersionOneWithIdentifier:(NSString *)cellIdentifier forTableView:(UITableView *)tableView forIndexPath:(NSIndexPath *)indexPath
+//{
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+//    return cell;
+//}
+
+-(MyCell *) getCellVersionOneWithIdentifier:(NSString *)cellIdentifier forTableView:(UITableView *)tableView forIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-    return cell;
+    MyCell *myCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    return myCell;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -90,9 +97,18 @@ static NSString *CellIdentifier = @"Cell";
     // Don't need this conditional logic when registering the cell and calling tableView dequeueReusableCellWithIdentifier:forIndexPath:
 //    if(cell == nil){
 //        cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        
+    
+    
+        // Set up styles for all cells.
+    
         // text styling (label).
-        cell.textLabel.textColor = [UIColor whiteColor];
+#warning implement this conditional logic for all cell properties.
+        if(![cell.textLabel.textColor isEqual: [UIColor whiteColor]]){
+            cell.textLabel.textColor = [UIColor whiteColor];
+            NSLog(@"initializing a cell");
+        }else{
+            NSLog(@"reusing a cell");
+        }
         cell.textLabel.highlightedTextColor = [UIColor redColor];
         cell.textLabel.textAlignment = NSTextAlignmentLeft;
         cell.textLabel.numberOfLines = 2; // 0 = no max
@@ -138,7 +154,7 @@ static NSString *CellIdentifier = @"Cell";
         cell.selectedBackgroundView = selectedBackgroundView;
         
 //    }
-    // Configure the cell...
+    // Configure the individual cell...
     cell.textLabel.text = [NSString stringWithFormat:@"Hello there!\n %ld", (long)indexPath.row];
     return cell;
 }
