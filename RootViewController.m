@@ -22,7 +22,10 @@ static NSString *CellIdentifier = @"Cell";
     [super viewDidLoad];
     
     
-    [self.tableView registerClass:[UITableViewCell class]
+//    [self.tableView registerClass:[UITableViewCell class]
+//           forCellReuseIdentifier:CellIdentifier];
+    
+    [self.tableView registerClass:[MyCell class]
            forCellReuseIdentifier:CellIdentifier];
     
     
@@ -92,7 +95,8 @@ static NSString *CellIdentifier = @"Cell";
 //    UITableViewCell *cell = [self getCellVersionOneWithIdentifier:CellIdentifier forTableView:tableView];
     
     // Need to register cell for the next one to work.
-    UITableViewCell *cell = [self getCellVersionOneWithIdentifier:CellIdentifier forTableView:tableView forIndexPath:indexPath];
+//    UITableViewCell *cell = [self getCellVersionOneWithIdentifier:CellIdentifier forTableView:tableView forIndexPath:indexPath];
+    MyCell *cell = [self getCellVersionOneWithIdentifier:CellIdentifier forTableView:tableView forIndexPath:indexPath];
     
     // Don't need this conditional logic when registering the cell and calling tableView dequeueReusableCellWithIdentifier:forIndexPath:
 //    if(cell == nil){
@@ -111,7 +115,7 @@ static NSString *CellIdentifier = @"Cell";
         }
         cell.textLabel.highlightedTextColor = [UIColor redColor];
         cell.textLabel.textAlignment = NSTextAlignmentLeft;
-        cell.textLabel.numberOfLines = 2; // 0 = no max
+        cell.textLabel.numberOfLines = 0; // 0 = no max
         cell.textLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:18.0];
         cell.textLabel.shadowColor = [UIColor lightGrayColor];
         cell.textLabel.shadowOffset = CGSizeMake(1, 1);
@@ -152,10 +156,15 @@ static NSString *CellIdentifier = @"Cell";
         UIView *selectedBackgroundView = [UIView new];
         selectedBackgroundView.backgroundColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.0 alpha:0.6];
         cell.selectedBackgroundView = selectedBackgroundView;
-        
+    
+        cell.detailTextLabel.text = @"SUB TITLE";
+        cell.detailTextLabel.textColor = [UIColor whiteColor];
+    
 //    }
     // Configure the individual cell...
-    cell.textLabel.text = [NSString stringWithFormat:@"Hello there!\n %ld", (long)indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"Hello there! %ld", (long)indexPath.row];
+    
+
     return cell;
 }
 
