@@ -20,7 +20,28 @@
     
     self.tableView.rowHeight = 80.0;
     self.tableView.separatorColor = [UIColor redColor];
-    self.tableView.backgroundColor = [UIColor colorWithRed:0.6 green:0.5 blue:0.1 alpha:0.5];
+    self.tableView.backgroundColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.0 alpha:0.6];
+
+    
+    // tableHeaderView
+    UIView *tableHeaderView = [UIView new];
+    tableHeaderView.backgroundColor = [UIColor colorWithRed:0.5 green:0.3 blue:0.0 alpha:0.2];
+    tableHeaderView.bounds = CGRectMake(0, 0, 0, 60.0);
+    self.tableView.tableHeaderView = tableHeaderView;
+    
+    UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMidX(tableHeaderView.bounds) - 50.0f, 10.0f, tableHeaderView.bounds.size.width - 20.0, tableHeaderView.bounds.size.height - 20.0)];
+    headerLabel.text = @"tableHeaderView";
+    [tableHeaderView addSubview:headerLabel];
+    
+    // tableFooterView
+    UIView *tableFooterView = [UIView new];
+    tableFooterView.backgroundColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.1 alpha:0.4];
+    tableFooterView.bounds = CGRectMake(0, 0, 0, 60.0);
+    self.tableView.tableFooterView = tableFooterView;
+    
+    UILabel *footerLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMidX(tableHeaderView.bounds) - 50.0f, 10.0f, tableHeaderView.bounds.size.width - 20.0, tableHeaderView.bounds.size.height - 20.0)];
+    footerLabel.text = @"tableFooterView";
+    [tableFooterView addSubview:footerLabel];
 }
 
 #pragma mark - Table view data source
@@ -44,7 +65,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if(cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         
         // text styling (label).
         cell.textLabel.textColor = [UIColor whiteColor];
