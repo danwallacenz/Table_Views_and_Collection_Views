@@ -21,6 +21,7 @@
 		CBD0D08219970754001CFD34 /* Table_Views_and_Collection_ViewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD0D08119970754001CFD34 /* Table_Views_and_Collection_ViewsTests.m */; };
 		CBD0D08D19970772001CFD34 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD0D08C19970772001CFD34 /* RootViewController.m */; };
 		CBD0D09219970B28001CFD34 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD0D09019970B28001CFD34 /* RootViewController.xib */; };
+		CBD0D09619973A4B001CFD34 /* smiley.png in Resources */ = {isa = PBXBuildFile; fileRef = CBD0D09519973A4B001CFD34 /* smiley.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		CBD0D08B19970772001CFD34 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = ../RootViewController.h; sourceTree = "<group>"; };
 		CBD0D08C19970772001CFD34 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = ../RootViewController.m; sourceTree = "<group>"; };
 		CBD0D09019970B28001CFD34 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		CBD0D09519973A4B001CFD34 /* smiley.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smiley.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				CBD0D06B19970754001CFD34 /* AppDelegate.h */,
 				CBD0D06C19970754001CFD34 /* AppDelegate.m */,
 				CBD0D06E19970754001CFD34 /* Images.xcassets */,
+				CBD0D09519973A4B001CFD34 /* smiley.png */,
 				CBD0D06319970754001CFD34 /* Supporting Files */,
 			);
 			path = Table_Views_and_Collection_Views;
@@ -228,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBD0D06719970754001CFD34 /* InfoPlist.strings in Resources */,
+				CBD0D09619973A4B001CFD34 /* smiley.png in Resources */,
 				CBD0D06F19970754001CFD34 /* Images.xcassets in Resources */,
 				CBD0D09219970B28001CFD34 /* RootViewController.xib in Resources */,
 			);
