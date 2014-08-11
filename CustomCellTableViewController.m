@@ -24,8 +24,6 @@ static NSString *CellIdentifier = @"CustomCell";
     [self.tableView registerClass:[MyCustomViewCell class]
            forCellReuseIdentifier:CellIdentifier];
     
-    
-    
     [self.tableView setContentInset:UIEdgeInsetsMake(statusBarHeight(), 0, self.tabBarController.tabBar.frame.size.height, 0)];
 }
 
@@ -47,20 +45,41 @@ static NSString *CellIdentifier = @"CustomCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    MyCustomViewCell *myCustomCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    MyCustomViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     // Set up styles for all cells.
 
+    // image.
+    cell.imageView.image = [self image];
+    cell.imageView.contentMode = UIViewContentModeCenter;
+    
+    cell.imageView.layer.cornerRadius = cell.imageView.image.size.height / 2.0;
+    cell.imageView.clipsToBounds = YES;
+    
+    // accessory type
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
     // Configure the individual cell...
-    myCustomCell.textLabel.text = [NSString stringWithFormat:@"Custom Cell! %ld", (long)indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"Custom Cell! %ld", (long)indexPath.row];
     
 
-    return myCustomCell;
+    return cell;
 }
 
 CGFloat statusBarHeight()
 {
     CGSize statusBarSize = [[UIApplication sharedApplication] statusBarFrame].size;
     return MIN(statusBarSize.width, statusBarSize.height);
+}
+
+-(UIImage *) image
+{
+    CGFloat side = 30;
+    UIImage *originalImage = [UIImage imageNamed:@"smiley"];
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(side,side), YES, 0);
+    [originalImage drawInRect:CGRectMake(0, 0, side, side)];
+    UIImage *resizedImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return resizedImage;
 }
 
 @end

@@ -22,9 +22,9 @@
     self.window.rootViewController = uiTabBarController;
     
     RootViewController *rootViewController = [RootViewController new];
-    rootViewController.title = @"First TVC";
+    rootViewController.title = @"Cell Properties";
     CustomCellTableViewController *customCellTableViewController = [CustomCellTableViewController new];
-    customCellTableViewController.title = @"Custom Cells";
+    customCellTableViewController.title = @"layoutSubviews";
     
     [uiTabBarController setViewControllers:@[customCellTableViewController, rootViewController] animated: YES];
 
