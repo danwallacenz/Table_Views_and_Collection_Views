@@ -24,7 +24,7 @@ static NSString *CellIdentifier = @"CustomCell";
     [self.tableView registerClass:[MyCustomViewCell class]
            forCellReuseIdentifier:CellIdentifier];
     
-    [self.tableView setContentInset:UIEdgeInsetsMake(statusBarHeight(), 0, self.tabBarController.tabBar.frame.size.height, 0)];
+    [self.tableView setContentInset:UIEdgeInsetsMake([DWDeviceUtils statusBarHeight], 0, self.tabBarController.tabBar.frame.size.height, 0)];
 }
 
 #pragma mark - Table view data source
@@ -65,11 +65,11 @@ static NSString *CellIdentifier = @"CustomCell";
     return cell;
 }
 
-CGFloat statusBarHeight()
-{
-    CGSize statusBarSize = [[UIApplication sharedApplication] statusBarFrame].size;
-    return MIN(statusBarSize.width, statusBarSize.height);
-}
+//CGFloat statusBarHeight()
+//{
+//    CGSize statusBarSize = [[UIApplication sharedApplication] statusBarFrame].size;
+//    return MIN(statusBarSize.width, statusBarSize.height);
+//}
 
 -(UIImage *) image
 {
