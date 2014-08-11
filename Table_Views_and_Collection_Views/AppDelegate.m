@@ -10,6 +10,7 @@
 #import "RootViewController.h"
 #import "CustomCellTableViewController.h"
 #import "CellSubviewsInCodeTVC.h"
+#import "XibCellTableViewController.h"
 
 @implementation AppDelegate
 
@@ -28,8 +29,10 @@
     customCellTableViewController.title = @"layoutSubviews";
     CellSubviewsInCodeTVC *cellSubviewsInCodeTVC = [CellSubviewsInCodeTVC new];
     cellSubviewsInCodeTVC.title = @"Subviews In Code";
+    XibCellTableViewController *xibCellTableViewController = [XibCellTableViewController new];
+    xibCellTableViewController.title = @"Cell in nib";
     
-    [uiTabBarController setViewControllers:@[cellSubviewsInCodeTVC, customCellTableViewController, rootViewController] animated: YES];
+    [uiTabBarController setViewControllers:@[xibCellTableViewController, cellSubviewsInCodeTVC, customCellTableViewController, rootViewController] animated: YES];
 
     
     self.window.backgroundColor = [UIColor whiteColor];

@@ -21,15 +21,14 @@
 		CBD0D08219970754001CFD34 /* Table_Views_and_Collection_ViewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD0D08119970754001CFD34 /* Table_Views_and_Collection_ViewsTests.m */; };
 		CBD0D08D19970772001CFD34 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD0D08C19970772001CFD34 /* RootViewController.m */; };
 		CBD0D09219970B28001CFD34 /* RootViewControllerUNNEEDED.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD0D09019970B28001CFD34 /* RootViewControllerUNNEEDED.xib */; };
-		CBD0D09619973A4B001CFD34 /* smiley.png in Resources */ = {isa = PBXBuildFile; fileRef = CBD0D09519973A4B001CFD34 /* smiley.png */; };
-		CBD0D09819974A44001CFD34 /* linen.png in Resources */ = {isa = PBXBuildFile; fileRef = CBD0D09719974A44001CFD34 /* linen.png */; };
-		CBD0D09A19975BD0001CFD34 /* flowers.png in Resources */ = {isa = PBXBuildFile; fileRef = CBD0D09919975BD0001CFD34 /* flowers.png */; };
 		E066291D199831A300948E18 /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E066291C199831A300948E18 /* MyCell.m */; };
 		E066291F19985FF800948E18 /* CustomCellTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E066291E19985FF800948E18 /* CustomCellTableViewController.m */; };
 		E06629231998652800948E18 /* MyCustomViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E06629221998652800948E18 /* MyCustomViewCell.m */; };
 		E06629261998764B00948E18 /* CellSubviewsInCodeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E06629251998764B00948E18 /* CellSubviewsInCodeTVC.m */; };
 		E066292C19987CDE00948E18 /* DWDeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E066292B19987CDE00948E18 /* DWDeviceUtils.m */; };
-		E066292E199892EF00948E18 /* smiley-transparent-BG.png in Resources */ = {isa = PBXBuildFile; fileRef = E066292D199892EF00948E18 /* smiley-transparent-BG.png */; };
+		E06629301998A26600948E18 /* XibCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E066292F1998A26600948E18 /* XibCell.xib */; };
+		E06629331998A40C00948E18 /* XibCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E06629321998A40C00948E18 /* XibCell.m */; };
+		E06629361998A5B000948E18 /* XibCellTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E06629351998A5B000948E18 /* XibCellTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,9 +61,6 @@
 		CBD0D08B19970772001CFD34 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = ../RootViewController.h; sourceTree = "<group>"; };
 		CBD0D08C19970772001CFD34 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = ../RootViewController.m; sourceTree = "<group>"; };
 		CBD0D09019970B28001CFD34 /* RootViewControllerUNNEEDED.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewControllerUNNEEDED.xib; sourceTree = "<group>"; };
-		CBD0D09519973A4B001CFD34 /* smiley.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smiley.png; sourceTree = "<group>"; };
-		CBD0D09719974A44001CFD34 /* linen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linen.png; sourceTree = "<group>"; };
-		CBD0D09919975BD0001CFD34 /* flowers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flowers.png; sourceTree = "<group>"; };
 		E066291B199831A300948E18 /* MyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCell.h; path = ../MyCell.h; sourceTree = "<group>"; };
 		E066291C199831A300948E18 /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyCell.m; path = ../MyCell.m; sourceTree = "<group>"; };
 		E066291E19985FF800948E18 /* CustomCellTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellTableViewController.m; sourceTree = SOURCE_ROOT; };
@@ -75,7 +71,11 @@
 		E06629251998764B00948E18 /* CellSubviewsInCodeTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellSubviewsInCodeTVC.m; sourceTree = "<group>"; };
 		E066292A19987CDE00948E18 /* DWDeviceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDeviceUtils.h; sourceTree = "<group>"; };
 		E066292B19987CDE00948E18 /* DWDeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWDeviceUtils.m; sourceTree = "<group>"; };
-		E066292D199892EF00948E18 /* smiley-transparent-BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "smiley-transparent-BG.png"; sourceTree = "<group>"; };
+		E066292F1998A26600948E18 /* XibCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = XibCell.xib; path = ../XibCell.xib; sourceTree = "<group>"; };
+		E06629311998A40C00948E18 /* XibCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XibCell.h; sourceTree = "<group>"; };
+		E06629321998A40C00948E18 /* XibCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XibCell.m; sourceTree = "<group>"; };
+		E06629341998A5B000948E18 /* XibCellTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XibCellTableViewController.h; sourceTree = "<group>"; };
+		E06629351998A5B000948E18 /* XibCellTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XibCellTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,8 +135,13 @@
 		CBD0D06219970754001CFD34 /* Table_Views_and_Collection_Views */ = {
 			isa = PBXGroup;
 			children = (
+				E066292F1998A26600948E18 /* XibCell.xib */,
+				E06629311998A40C00948E18 /* XibCell.h */,
+				E06629321998A40C00948E18 /* XibCell.m */,
 				E06629241998764B00948E18 /* CellSubviewsInCodeTVC.h */,
 				E06629251998764B00948E18 /* CellSubviewsInCodeTVC.m */,
+				E06629341998A5B000948E18 /* XibCellTableViewController.h */,
+				E06629351998A5B000948E18 /* XibCellTableViewController.m */,
 				E066291B199831A300948E18 /* MyCell.h */,
 				E066291C199831A300948E18 /* MyCell.m */,
 				E06629211998652800948E18 /* MyCustomViewCell.h */,
@@ -145,14 +150,10 @@
 				CBD0D08C19970772001CFD34 /* RootViewController.m */,
 				E06629201998603600948E18 /* CustomCellTableViewController.h */,
 				E066291E19985FF800948E18 /* CustomCellTableViewController.m */,
-				CBD0D09919975BD0001CFD34 /* flowers.png */,
 				CBD0D09019970B28001CFD34 /* RootViewControllerUNNEEDED.xib */,
 				CBD0D06B19970754001CFD34 /* AppDelegate.h */,
 				CBD0D06C19970754001CFD34 /* AppDelegate.m */,
 				CBD0D06E19970754001CFD34 /* Images.xcassets */,
-				E066292D199892EF00948E18 /* smiley-transparent-BG.png */,
-				CBD0D09519973A4B001CFD34 /* smiley.png */,
-				CBD0D09719974A44001CFD34 /* linen.png */,
 				CBD0D06319970754001CFD34 /* Supporting Files */,
 			);
 			path = Table_Views_and_Collection_Views;
@@ -264,13 +265,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBD0D09A19975BD0001CFD34 /* flowers.png in Resources */,
-				E066292E199892EF00948E18 /* smiley-transparent-BG.png in Resources */,
 				CBD0D06719970754001CFD34 /* InfoPlist.strings in Resources */,
-				CBD0D09619973A4B001CFD34 /* smiley.png in Resources */,
-				CBD0D09819974A44001CFD34 /* linen.png in Resources */,
 				CBD0D06F19970754001CFD34 /* Images.xcassets in Resources */,
 				CBD0D09219970B28001CFD34 /* RootViewControllerUNNEEDED.xib in Resources */,
+				E06629301998A26600948E18 /* XibCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +287,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E06629331998A40C00948E18 /* XibCell.m in Sources */,
+				E06629361998A5B000948E18 /* XibCellTableViewController.m in Sources */,
 				CBD0D06D19970754001CFD34 /* AppDelegate.m in Sources */,
 				E066291D199831A300948E18 /* MyCell.m in Sources */,
 				E066291F19985FF800948E18 /* CustomCellTableViewController.m in Sources */,

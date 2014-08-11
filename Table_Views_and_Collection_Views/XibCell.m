@@ -8,6 +8,13 @@
 
 #import "XibCell.h"
 
+@interface XibCell()
+
+//@property (nonatomic, weak) IBOutlet UILabel *theLabel;
+//@property (nonatomic, weak) IBOutlet UIImageView *theImageView;
+
+@end
+
 @implementation XibCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
