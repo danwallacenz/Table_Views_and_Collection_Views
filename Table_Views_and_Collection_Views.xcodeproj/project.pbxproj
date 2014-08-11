@@ -26,6 +26,7 @@
 		CBD0D09A19975BD0001CFD34 /* flowers.png in Resources */ = {isa = PBXBuildFile; fileRef = CBD0D09919975BD0001CFD34 /* flowers.png */; };
 		E066291D199831A300948E18 /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E066291C199831A300948E18 /* MyCell.m */; };
 		E066291F19985FF800948E18 /* CustomCellTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E066291E19985FF800948E18 /* CustomCellTableViewController.m */; };
+		E06629231998652800948E18 /* MyCustomViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E06629221998652800948E18 /* MyCustomViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		E066291C199831A300948E18 /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyCell.m; path = ../MyCell.m; sourceTree = "<group>"; };
 		E066291E19985FF800948E18 /* CustomCellTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellTableViewController.m; sourceTree = SOURCE_ROOT; };
 		E06629201998603600948E18 /* CustomCellTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellTableViewController.h; sourceTree = "<group>"; };
+		E06629211998652800948E18 /* MyCustomViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCustomViewCell.h; sourceTree = "<group>"; };
+		E06629221998652800948E18 /* MyCustomViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCustomViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,9 +129,11 @@
 			children = (
 				E066291B199831A300948E18 /* MyCell.h */,
 				E066291C199831A300948E18 /* MyCell.m */,
+				E06629211998652800948E18 /* MyCustomViewCell.h */,
+				E06629221998652800948E18 /* MyCustomViewCell.m */,
 				CBD0D08B19970772001CFD34 /* RootViewController.h */,
-				E06629201998603600948E18 /* CustomCellTableViewController.h */,
 				CBD0D08C19970772001CFD34 /* RootViewController.m */,
+				E06629201998603600948E18 /* CustomCellTableViewController.h */,
 				E066291E19985FF800948E18 /* CustomCellTableViewController.m */,
 				CBD0D09919975BD0001CFD34 /* flowers.png */,
 				CBD0D09019970B28001CFD34 /* RootViewControllerUNNEEDED.xib */,
@@ -273,6 +278,7 @@
 				CBD0D06D19970754001CFD34 /* AppDelegate.m in Sources */,
 				E066291D199831A300948E18 /* MyCell.m in Sources */,
 				E066291F19985FF800948E18 /* CustomCellTableViewController.m in Sources */,
+				E06629231998652800948E18 /* MyCustomViewCell.m in Sources */,
 				CBD0D06919970754001CFD34 /* main.m in Sources */,
 				CBD0D08D19970772001CFD34 /* RootViewController.m in Sources */,
 			);
