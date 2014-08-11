@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RootViewController.h"
+#import "CustomCellTableViewController.h"
 
 @implementation AppDelegate
 
@@ -16,7 +17,17 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    self.window.rootViewController = [RootViewController new];
+    UITabBarController *uiTabBarController = [UITabBarController new];
+    
+    self.window.rootViewController = uiTabBarController;
+    
+    RootViewController *rootViewController = [RootViewController new];
+    rootViewController.title = @"RootViewController";
+    CustomCellTableViewController *customCellTableViewController = [CustomCellTableViewController new];
+    customCellTableViewController.title = @"CustomCellTableViewController";
+    
+    [uiTabBarController setViewControllers:@[customCellTableViewController, rootViewController] animated: YES];
+
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
